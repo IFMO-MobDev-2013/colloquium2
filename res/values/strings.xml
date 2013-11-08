@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Scheduler</string>
+    <string name="description">description</string>
+    <string name="points">points</string>
+    <string name="channelDescription">description</string>
+    <string name="subjectDescription">description</string>
+    <string name="marks">Your marks</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="marks" type="id">marks</item>
+    <item name="subjects" type="id"/>
+    <item name="markDescription" type="id">markDescription</item>
+    <item name="markPoints" type="id">markPoints</item>
+    <item name="addNewMark" type="id">addNewMark</item>
+    <item name="addNewSubject" type="id">addNewSubject</item>
+    <item name="editSubject" type="id">editSubject</item>
+</resources>
