@@ -63,7 +63,7 @@ public class SubjectList extends Activity {
             public void onItemClick(AdapterView<?> parent, View itemClicked, int position, long id) {
                 Intent intent = new Intent(SubjectList.this, TaskList.class);
                 intent.putExtra("subject", subj.get(position));
-                startActivity(intent);
+                startActivityForResult(intent, 0);
             }
         });
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {

@@ -49,7 +49,7 @@ public class TaskList extends Activity {
         subjDb.updateSubj(subject, subject, totalScore);
 
         Intent broadcastIntent = new Intent(UpdateBroadcastReceiver.UpdateAction);
-        sendBroadcast(broadcastIntent);
+        setResult(RESULT_OK, new Intent());
     }
 
     @Override
