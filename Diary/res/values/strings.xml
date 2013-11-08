@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Diary</string>
+    <string name="menu_insert">insert</string>
+    <string name="menu_delete">delete</string>
+    <string name="menu_drop">drop</string>
+    <string name="subjects_name">Subjects name and points divided by colon \",\"</string>
+    <string name="ok">OK</string>
+    <string name="cancel">cancel</string>
+    <string name="sure">Are you sure??</string>
+    <string name="dropall">drop all</string>
+
+
+</resources>
