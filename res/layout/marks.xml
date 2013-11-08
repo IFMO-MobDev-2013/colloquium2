@@ -28,6 +28,19 @@
                 android:layout_height="wrap_content"
                 android:text="@string/addBtn"
                 android:id="@+id/addMarkBtn" android:layout_alignParentRight="true" android:layout_alignTop="@+id/backBtn"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mark:"
+                android:id="@+id/textView"
+                android:textSize="17dp"
+                android:layout_toLeftOf="@+id/subjectMark" android:layout_alignTop="@+id/backBtn"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/subjectMark"
+                android:textSize="17dp"
+                android:layout_toLeftOf="@+id/addMarkBtn" android:layout_alignTop="@+id/backBtn" android:text="000"/>
     </RelativeLayout>
     <ListView
             android:layout_width="wrap_content"

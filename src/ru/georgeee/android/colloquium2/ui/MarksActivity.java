@@ -23,6 +23,7 @@ public class MarksActivity extends SFBaseActivity {
     EntryListAdapter markListAdapter;
     Button backBtn;
     Button addMarkBtn;
+    TextView subjectMark;
     ArrayList<Mark> marks = new ArrayList<Mark>();
 
     @Override
@@ -51,6 +52,7 @@ public class MarksActivity extends SFBaseActivity {
         setContentView(R.layout.marks);
         markList = (ListView) findViewById(R.id.markList);
         feedTitle = (TextView) findViewById(R.id.subjectName);
+        subjectMark = (TextView) findViewById(R.id.subjectMark);
         backBtn = (Button) findViewById(R.id.backBtn);
         addMarkBtn = (Button) findViewById(R.id.addMarkBtn);
         backBtn.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +78,7 @@ public class MarksActivity extends SFBaseActivity {
         Bundle extras = getIntent().getExtras();
         subject = (Subject) extras.get("subject");
         ArrayList<Mark> marks = (ArrayList<Mark>) extras.get("marks");
+        subjectMark.setText(String.valueOf(subject.getMark()));
         reloadFeed(marks);
         onResume();
     }
@@ -88,6 +91,7 @@ public class MarksActivity extends SFBaseActivity {
             markListAdapter.remove(mark);
             markListAdapter.add(mark);
             markListAdapter.notifyDataSetInvalidated();
+            subjectMark.setText(String.valueOf(subject.getMark()));
         }
     }
 

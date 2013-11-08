@@ -28,6 +28,10 @@ public class MarkTable extends Table<Mark> {
         super(context);
     }
 
+    public static MarkTable getInstance(){
+        return instance;
+    }
+
     public static MarkTable getInstance(Context context) {
         if (instance == null) instance = new MarkTable(context);
         return instance;
@@ -114,4 +118,11 @@ public class MarkTable extends Table<Mark> {
     }
 
 
+    public int getSumBySubjectId(long subjectId){
+        Cursor cursor = mDB.query(DB_TABLE, new String[]{"SUM("+COLUMN_VALUE+")"}, COLUMN_SUBJECT_ID+" = "+subjectId, null, null, null, null, null);
+        cursor.moveToNext();
+        int result = cursor.getInt(0);
+        cursor.close();
+        return result;
+    }
 }

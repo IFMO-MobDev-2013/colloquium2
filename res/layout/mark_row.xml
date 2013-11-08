@@ -5,14 +5,25 @@
               android:layout_width="fill_parent"
               android:layout_height="wrap_content">
 
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Entry title"
-            android:id="@+id/markName" android:textSize="10pt"/>
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="02.03.2013 22:33"
-            android:id="@+id/markValue"/>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp">
+        <TextView
+                android:layout_width="201dp"
+                android:layout_height="wrap_content"
+                android:text="Entry title"
+                android:id="@+id/markName" android:textSize="10pt" android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="02.03.2013 22:33"
+                android:id="@+id/markValue"
+                android:layout_alignLeft="@+id/markName" android:layout_below="@+id/markName"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:layout_alignRight="@+id/markName" android:layout_alignTop="@+id/markName"/>
+    </RelativeLayout>
 </LinearLayout>

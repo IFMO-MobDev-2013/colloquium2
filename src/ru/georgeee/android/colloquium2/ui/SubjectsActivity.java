@@ -24,6 +24,18 @@ public class SubjectsActivity extends SFBaseActivity {
     SubjectListAdapter subjectListAdapter;
     Button addSubjectButton;
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        subjectListAdapter.notifyDataSetInvalidated();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        subjectListAdapter.notifyDataSetInvalidated();
+    }
+
     /**
      * Called when the activity is first created.
      */
@@ -80,6 +92,7 @@ public class SubjectsActivity extends SFBaseActivity {
                 intent.putExtra("subject", subject);
                 intent.putExtra("marks", marks);
                 startActivity(intent);
+                subjectListAdapter.notifyDataSetInvalidated();
             } else if (resultCode == LoadMarksCommand.RESPONSE_PROGRESS) {
                 updateProgressDialog(resultData.getInt(SFBaseCommand.EXTRA_PROGRESS, -1));
             } else {

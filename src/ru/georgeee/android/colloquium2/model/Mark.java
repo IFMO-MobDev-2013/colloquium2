@@ -53,4 +53,24 @@ public class Mark implements Serializable, Comparable<Mark> {
     public int compareTo(Mark mark) {
         return name.compareTo(mark.name);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Mark)) return false;
+
+        Mark mark = (Mark) o;
+
+        if (markId != mark.markId) return false;
+        if (subjectId != mark.subjectId) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (int) (markId ^ (markId >>> 32));
+        result = 31 * result + (int) (subjectId ^ (subjectId >>> 32));
+        return result;
+    }
 }
