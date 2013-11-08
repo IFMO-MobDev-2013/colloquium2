@@ -34,7 +34,7 @@ public class EditSubjectDialog extends DialogFragment implements View.OnClickLis
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
-            case R.id.edit_rating_dialog_edit:
+            case R.id.edit_subject_dialog_edit:
                 String s = etName.getText().toString();
                 if (s.length() > 0) {
                     subject.name = s;
@@ -45,13 +45,14 @@ public class EditSubjectDialog extends DialogFragment implements View.OnClickLis
                     dismiss();
                 }
                 break;
-            case R.id.edit_rating_dialog_delete:
+            case R.id.edit_subject_dialog_delete:
                 DBStorage dbStorage = new DBStorage(context);
                 dbStorage.deleteSubject(subject.id);
                 dbStorage.destroy();
+                listener.onDialogDismissed();
                 dismiss();
                 break;
-            case R.id.add_subject_dialog_cancel:
+            case R.id.edit_subject_dialog_cancel:
                 dismiss();
                 break;
         }

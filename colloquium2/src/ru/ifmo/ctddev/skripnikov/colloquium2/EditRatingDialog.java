@@ -16,7 +16,7 @@ public class EditRatingDialog extends DialogFragment implements View.OnClickList
     EditText etDescription;
     EditText etMark;
 
-    EditRatingDialog(Context context, Subject subject,Rating rating, Listener listener) {
+    EditRatingDialog(Context context, Subject subject, Rating rating, Listener listener) {
         this.context = context;
         this.subject = subject;
         this.rating = rating;
@@ -31,6 +31,8 @@ public class EditRatingDialog extends DialogFragment implements View.OnClickList
         v.findViewById(R.id.edit_rating_dialog_cancel).setOnClickListener(this);
         etDescription = (EditText) v.findViewById(R.id.edit_rating_dialog_description);
         etMark = (EditText) v.findViewById(R.id.edit_rating_dialog_mark);
+        etDescription.setText(rating.description);
+        etMark.setText((new Integer(rating.value)).toString());
         return v;
     }
 
@@ -52,17 +54,21 @@ public class EditRatingDialog extends DialogFragment implements View.OnClickList
                         dbStorage.changeSubject(subject);
                         dbStorage.destroy();
                         listener.onDialogDismissed();
+                        dismiss();
                     } catch (NumberFormatException ignored) {
                     }
                 }
                 break;
             case R.id.edit_rating_dialog_delete:
+                subject.rating -= rating.value;
                 DBStorage dbStorage = new DBStorage(context);
                 dbStorage.deleteRating(rating.id);
+                dbStorage.changeSubject(subject);
                 dbStorage.destroy();
+                listener.onDialogDismissed();
                 dismiss();
                 break;
-            case R.id.add_rating_dialog_cancel:
+            case R.id.edit_rating_dialog_cancel:
                 dismiss();
                 break;
         }
