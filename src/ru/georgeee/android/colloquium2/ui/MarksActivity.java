@@ -86,7 +86,7 @@ public class MarksActivity extends SFBaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(data.getExtras().containsKey("mark")){
+        if(data != null && data.getExtras().containsKey("mark")){
             Mark mark = (Mark) data.getSerializableExtra("mark");
             markListAdapter.remove(mark);
             markListAdapter.add(mark);
@@ -118,6 +118,7 @@ public class MarksActivity extends SFBaseActivity {
             markListAdapter.notifyDataSetInvalidated();
             markListAdapter.remove(mark);
             MarkTable.getInstance(this).delete(mark);
+            subjectMark.setText(String.valueOf(subject.getMark()));
             return true;
         }else if(item.getItemId() == MENU_EDIT_ITEM){
             AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();

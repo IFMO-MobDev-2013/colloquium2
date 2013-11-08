@@ -90,7 +90,7 @@ public class MarkTable extends Table<Mark> {
     }
 
     public void delete(Mark mark) {
-        this.deleteAllFromSubject(mark.getMarkId());
+        this.delete(mark.getMarkId());
     }
 
     public Mark[] loadMarks(long feedId, int offset, int limit) throws IOException, ClassNotFoundException {

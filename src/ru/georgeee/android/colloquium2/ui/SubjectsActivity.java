@@ -104,7 +104,7 @@ public class SubjectsActivity extends SFBaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(data.getExtras().containsKey("subject")){
+        if(data != null && data.getExtras().containsKey("subject")){
             Subject subject = (Subject) data.getSerializableExtra("subject");
             subjectListAdapter.remove(subject);
             subjectListAdapter.add(subject);
