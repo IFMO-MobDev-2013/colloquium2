@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New task"
+            android:id="@+id/newTaskTitle"
+            android:layout_gravity="center"
+            android:textSize="20dp"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/newTaskName"
+            android:layout_gravity="left|center_vertical"
+            android:minWidth="30dp"
+            android:hint="Task name"
+            android:textAlignment="center"
+            />
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scoreText"
+            android:layout_gravity="left|center_vertical"
+            android:hint="Score"
+            android:minWidth="15dp"
+            android:inputType="number"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:id="@+id/newTaskButton"
+            android:layout_gravity="center"/>
+
+</LinearLayout>
