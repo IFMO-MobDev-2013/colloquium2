@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">colloquium2</string>
+    <string name="btnAddSubject_text">Add subject</string>
+    <string name="description">Description</string>
+    <string name="btnAddPoints_text">Add points</string>
+    <string name="actSubjects_label">PointsDiary</string>
+    <string name="actAddSubject_label">Add subject</string>
+    <string name="actAddPoints_label">Add points</string>
+    <string name="tstTapAgainToDelete">Tap again to edit or delete</string>
+    <string name="txtEditSubject">Edit subject</string>
+    <string name="mnuAdd">Add</string>
+    <string name="txtEditDetails">Edit details</string>
+    <string name="btnAddPoints_edit_text">Save changes</string>
+</resources>
