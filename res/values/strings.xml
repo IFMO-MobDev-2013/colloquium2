@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">colloquium2</string>
+    <string name="add">Add</string>
+    <string name="new_subject">New subject</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="subject_title_hint">Enter subject title...</string>
+    <string name="new_score">New score</string>
+    <string name="delete">Delete</string>
+    <string name="modify_score">Modify score</string>
+    <string name="score_title_hint">Enter score title...</string>
+</resources>
