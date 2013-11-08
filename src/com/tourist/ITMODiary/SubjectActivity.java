@@ -71,9 +71,9 @@ public class SubjectActivity extends Activity {
     }
 
     public long getTotalMark(long subjectID) {
-        //Cursor cur = myDBAdapter.fetchTotalMark(subjectID);
-        //cur.moveToFirst();
-        return 0;//cur.getLong(cursor.getColumnIndexOrThrow(DBAdapter.KEY_TOTAL));
+        Cursor cur = myDBAdapter.fetchTotalMark(subjectID);
+        cur.moveToFirst();
+        return cur.getLong(0);
     }
 
     private void showMarks() {
