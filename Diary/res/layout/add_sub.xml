@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:gravity="center|center_vertical|center_horizontal">
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:id="@+id/edtn" android:layout_gravity="center_horizontal|top" android:layout_weight="3"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:id="@+id/button" android:layout_gravity="center_horizontal|top" android:layout_weight="1"/>
+</LinearLayout>

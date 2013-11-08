@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Diary</string>
+    <string name="menu_insert">Add Sub</string>
+    <string name="task_menu_insert">Add Task</string>
+    <string name="menu_delete">Delete Sub</string>
+    <string name="task_menu_delete">Delete Task</string>
+    <string name="sub">sub</string>
+    <string name="points">points</string>
+</resources>
