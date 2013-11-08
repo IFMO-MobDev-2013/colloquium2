@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Colloquium2-2</string>
+    <string name="deleteBtn">Delete</string>
+    <string name="editBtn">Edit</string>
+    <string name="backBtn">←</string>
+    <string name="saveBtn">Save</string>
+    <string name="addBtn">+</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subject name"
+                android:id="@+id/editMarkSubjectName" android:layout_gravity="left|center_vertical"
+                android:textSize="10pt" android:layout_toRightOf="@+id/backBtn" android:layout_alignTop="@+id/backBtn"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/backBtn"
+                android:id="@+id/backBtn"/>
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Mark name"
+                android:id="@+id/editMarkName" android:layout_gravity="left|center_vertical"
+                android:layout_alignLeft="@+id/backBtn" android:layout_below="@+id/backBtn"/>
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Mark value"
+                android:id="@+id/editMarkValue" android:layout_gravity="left|center_vertical"
+                android:layout_alignLeft="@+id/backBtn" android:layout_below="@+id/editMarkName"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/saveBtn"
+                android:id="@+id/editMarkSaveBtn" android:layout_gravity="left|center_vertical"
+                android:layout_alignLeft="@+id/backBtn" android:layout_below="@+id/editMarkValue"/>
+    </RelativeLayout>
