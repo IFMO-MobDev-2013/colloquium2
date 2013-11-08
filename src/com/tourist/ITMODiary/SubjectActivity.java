@@ -77,6 +77,7 @@ public class SubjectActivity extends Activity {
     }
 
     private void showMarks() {
+        subjectTotal.setText("" + getTotalMark(subjectID));
         cursor = myDBAdapter.fetchMarks(subjectID);
         String[] from = new String[]{DBAdapter.KEY_REASON, DBAdapter.KEY_MARK};
         int[] to = new int[]{R.id.mark_row_reason, R.id.mark_row_mark};
