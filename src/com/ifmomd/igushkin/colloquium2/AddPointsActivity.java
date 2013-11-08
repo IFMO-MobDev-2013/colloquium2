@@ -36,6 +36,7 @@ public class AddPointsActivity extends Activity implements SeekBar.OnSeekBarChan
         id = getIntent().getLongExtra(SubjectsActivity.EXTRA_SUBJECT_ID, -1);
         if (id != -1) {
             edtDescription.setText(getIntent().getStringExtra(EXTRA_DESCRIPTION));
+            edtDescription.setSelection(edtDescription.length());
             setTitle(getString(R.string.txtEditDetails));
             sbPoints.setProgress(getIntent().getIntExtra(EXTRA_POINTS, 0));
             btnAddPoints.setText(getString(R.string.btnAddPoints_edit_text));

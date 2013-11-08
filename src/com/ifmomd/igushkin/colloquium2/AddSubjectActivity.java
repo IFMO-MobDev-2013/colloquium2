@@ -32,6 +32,8 @@ public class AddSubjectActivity extends Activity implements View.OnClickListener
             edtSubjectName.setText(getIntent().getStringExtra(EXTRA_SUBJECT_NAME));
             setTitle(getString(R.string.txtEditSubject));
             edtSubjectName.setText(getIntent().getStringExtra(EXTRA_SUBJECT_NAME));
+            edtSubjectName.setSelection(edtSubjectName.length());
+            btnAddSubject.setText(getString(R.string.btnAddPoints_edit_text));
         }
     }
 
