@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ЦДО</string>
+    <string name="action_settings">Что за предмет?</string>
+    <string name="total">Баллы</string>
+    <string name="add">Добавить</string>
+    <string name="loading">Загрузка...</string>
+    <string name="edit">Редактировать</string>
+    <string name="delete">Удалить</string>
+    <string name="cancel">Отмена</string>
+    <string name="title_activity_add">Добавить</string>
+    <string name="amount">Сколько?</string>
+    <string name="label">Как называется?</string>
+    <string name="validation">Что-то не то</string>
+    <string name="save">Сохранить</string>
+    <string name="loading_items">Загрузка</string>
+    <string name="title_activity_view">Просмотр</string>
+    <string name="view">Посмотреть</string>
+    <string name="title_activity_subjects_activity">Предметы</string>
+    <string name="title_activity_add_subject">Добавить предмет</string>
+
+</resources>
