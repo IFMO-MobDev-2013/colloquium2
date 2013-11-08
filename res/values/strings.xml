@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">colloquium2</string>
+    <string name="subject_id">subject_id</string>
+    <string name="record_id">record_id</string>
+</resources>
