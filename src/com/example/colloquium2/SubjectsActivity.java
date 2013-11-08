@@ -78,6 +78,19 @@ public class SubjectsActivity extends Activity
         }
     }
 
+    public int sumScores(int subject_id) {
+        SubjectRecordsDatabase db = new SubjectRecordsDatabase(this);
+        rdb = db.getReadableDatabase();
+        Cursor cursor = rdb.query(SubjectRecordsDatabase.DATABASE_NAME,
+                null, SubjectRecordsDatabase.SUBJECT_ID + " = " + subject_id, null, null, null, null, "100");
+        int total = 0;
+        int scoreIndex = cursor.getColumnIndex(SubjectRecordsDatabase.RECORD_POINTS);
+        while (cursor.moveToNext()) {
+            total += cursor.getInt(scoreIndex);
+        }
+        return total;
+    }
+
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -119,7 +132,7 @@ public class SubjectsActivity extends Activity
         subjectsAdapter = new SubjectsAdapter();
         subjectsList.setAdapter(subjectsAdapter);
         Cursor cursor = rdb.query(SubjectsDatabase.DATABASE_NAME,
-                null, null, null, null, null, null);
+                null, null, null, null, null, null, "100");
         int name_column = cursor.getColumnIndex(SubjectsDatabase.SUBJECT_NAME);
         int id_column = cursor.getColumnIndex(SubjectsDatabase._ID);
         String name;
@@ -127,7 +140,7 @@ public class SubjectsActivity extends Activity
         while (cursor.moveToNext()) {
             name = cursor.getString(name_column);
             id = cursor.getInt(id_column);
-            subjectsAdapter.addSubject(name, id);
+            subjectsAdapter.addSubject(name + ": " + sumScores(id), id);
         }
         cursor.close();
         rdb.close();
