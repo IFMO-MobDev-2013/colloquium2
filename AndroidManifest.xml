@@ -18,5 +18,10 @@
         </activity>
         <activity android:name=".ui.MarksActivity">
         </activity>
+
+        <service
+                android:name=".service.SFCommandExecutorService"
+                android:exported="false" >
+        </service>
     </application>
 </manifest>

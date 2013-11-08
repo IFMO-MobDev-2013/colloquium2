@@ -50,7 +50,7 @@ public class EditMarkActivity extends Activity {
         });
         markName.setText(mark.getName());
         subjectName.setText(subject.getName());
-        markValue.setText(mark.getValue());
+        markValue.setText(String.valueOf(mark.getValue()));
         saveBtn = (Button) findViewById(R.id.editMarkSaveBtn);
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override

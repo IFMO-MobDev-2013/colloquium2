@@ -111,7 +111,7 @@ public class SubjectsActivity extends SFBaseActivity {
     }
 
     public static final int MENU_DELETE_ITEM = 1;
-    public static final int MENU_EDIT_ITEM = 1;
+    public static final int MENU_EDIT_ITEM = 2;
 
     @SuppressWarnings("deprecation")
     @Override
@@ -152,7 +152,7 @@ public class SubjectsActivity extends SFBaseActivity {
             TextView subjectMark = (TextView) rowView.findViewById(R.id.subjectMark);
             final Subject subject = getItem(position);
             subjectName.setText(subject.getName());
-            subjectMark.setText(subject.getMark());
+            subjectMark.setText(String.valueOf(subject.getMark()));
             return rowView;
         }
     }

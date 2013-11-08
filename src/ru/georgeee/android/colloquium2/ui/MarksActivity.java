@@ -103,7 +103,7 @@ public class MarksActivity extends SFBaseActivity {
     }
 
     public static final int MENU_DELETE_ITEM = 1;
-    public static final int MENU_EDIT_ITEM = 1;
+    public static final int MENU_EDIT_ITEM = 2;
 
     @SuppressWarnings("deprecation")
     @Override
@@ -163,7 +163,7 @@ public class MarksActivity extends SFBaseActivity {
             TextView markValue = (TextView) rowView.findViewById(R.id.markValue);
             final Mark mark = getItem(position);
             markName.setText(mark.getName());
-            markValue.setText(mark.getValue());
+            markValue.setText(String.valueOf(mark.getValue()));
             return rowView;
         }
     }
