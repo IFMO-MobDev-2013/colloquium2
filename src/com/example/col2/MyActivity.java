@@ -25,11 +25,10 @@ public class MyActivity extends Activity {
                 this, R.layout.simplerow, cursor, new String[]{"name"}, new int[]{R.id.textView}, 0);
         lv.setAdapter(simpleCursorAdapter);
 
-        lv.setAdapter(simpleCursorAdapter);
         Cursor cursort = db.getObs();
         startManagingCursor(cursort);
         SimpleCursorAdapter simpleCursorAdaptert = new SimpleCursorAdapter(
-                this, R.layout.simplerow, cursor, new String[]{"mark"}, new int[]{R.id.textView}, 0);
+                this, R.layout.simplerow, cursort, new String[]{"mark"}, new int[]{R.id.textView}, 0);
         lvMark.setAdapter(simpleCursorAdaptert);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -61,6 +60,12 @@ public class MyActivity extends Activity {
         SimpleCursorAdapter s = new SimpleCursorAdapter(
                 this, R.layout.simplerow, c, new String[]{"name"}, new int[]{R.id.textView}, 0);
         lv.setAdapter(s);
+        Cursor ct = db.getObs();
+        startManagingCursor(ct);
+        SimpleCursorAdapter st = new SimpleCursorAdapter(
+                this, R.layout.simplerow, ct, new String[]{"mark"}, new int[]{R.id.textView}, 0);
+        lvMark.setAdapter(st);
+
 
     }
 }

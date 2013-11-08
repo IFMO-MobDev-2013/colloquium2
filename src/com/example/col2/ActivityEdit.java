@@ -31,10 +31,10 @@ public class ActivityEdit extends Activity {
 
             @Override
             public void onClick(View v) {
-                String newUrl = etName.getText().toString();
-                String newName = etMark.getText().toString();
+                String newName = etName.getText().toString();
+                String newMark = etMark.getText().toString();
                 db.deleteInObById(idOb);
-                db.addInOb(newUrl, newName);
+                db.addInOb(newName, newMark);
                 setResult(0);
                 finish();
             }
