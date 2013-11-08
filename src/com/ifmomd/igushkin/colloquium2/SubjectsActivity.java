@@ -76,7 +76,6 @@ public class SubjectsActivity extends Activity implements AdapterView.OnItemClic
         String[] from = new String[]{PointsDBAdapter.KEY_SUBJECT, PointsDBAdapter.KEY_POINTS_SUM};
         int[] to = new int[]{android.R.id.text1, android.R.id.text2};
         c.moveToFirst();
-        int p = c.getInt(c.getColumnIndex(PointsDBAdapter.KEY_POINTS_SUM));
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.lst_left_right_item, c, from, to);
         lstSubjects.setAdapter(adapter);
     }
