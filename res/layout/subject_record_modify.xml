@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/subject_record_name_edit" android:layout_gravity="center" android:hint="Enter your subject record here"
+            android:layout_marginTop="7dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/subject_score_edit" android:layout_gravity="center" android:hint="Enter your score here"
+            android:layout_marginTop="12dp" android:inputType="number"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proceed"
+            android:id="@+id/subject_record_proceed" android:layout_gravity="center" android:layout_marginTop="8dp"
+            android:onClick="onSubjectRecordProceed"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove"
+            android:id="@+id/subject_record_remove" android:layout_gravity="center" android:layout_marginTop="9dp"
+            android:onClick="onSubjectRecordRemove"/>
+</LinearLayout>

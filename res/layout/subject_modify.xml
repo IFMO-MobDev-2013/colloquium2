@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/subject_name" android:layout_gravity="center" android:hint="Enter your subject name here"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proceed"
+            android:id="@+id/subject_add_confirmed" android:layout_gravity="center" android:layout_marginTop="27dp"
+            android:onClick="onProceed"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove"
+            android:id="@+id/subject_remove" android:layout_gravity="center" android:layout_marginTop="20dp"
+            android:onClick="onRemove"/>
+</LinearLayout>
