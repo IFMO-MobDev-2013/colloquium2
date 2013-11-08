@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject name"
+            android:id="@+id/subjectName" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+            android:textSize="10pt"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject value"
+            android:id="@+id/subjectMark" android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/subjectName" android:textSize="10pt"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mark:"
+            android:id="@+id/textView"
+            android:textSize="10pt" android:layout_toLeftOf="@+id/subjectMark"
+            android:layout_alignTop="@+id/subjectName" android:layout_marginRight="5px"/>
+</RelativeLayout>

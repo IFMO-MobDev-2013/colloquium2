@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/backBtn"
+            android:id="@+id/backBtn"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject name"
+            android:id="@+id/editSubjectSubjectName" android:layout_gravity="left|center_vertical"
+            android:textSize="10pt" android:layout_alignLeft="@+id/backBtn" android:layout_below="@+id/backBtn"
+            android:layout_alignParentRight="true"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/saveBtn"
+            android:id="@+id/editSubjectSaveBtn" android:layout_gravity="left|center_vertical"
+            android:layout_alignLeft="@+id/backBtn" android:layout_below="@+id/editSubjectSubjectName"/>
+</RelativeLayout>
