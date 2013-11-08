@@ -20,9 +20,14 @@
                 android:id="@+id/syncButton" android:onClick="gotoAddMark"/>
     </LinearLayout>
     <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="50dp">
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/marksSum" android:textSize="30dp" android:layout_weight="1"
+                android:gravity="center_vertical|left" android:layout_marginLeft="5dp"/>
     </LinearLayout>
     <ListView
             android:layout_width="wrap_content"

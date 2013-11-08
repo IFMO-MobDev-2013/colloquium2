@@ -48,7 +48,7 @@ public class MarksActivity extends Activity implements IEventHadler
         super.onResume();
 
         adapter.marks.clear();
-
+        int sum = 0;
         Cursor sth = Database.gi().query("select * from marks where id_subject = "+id_subject);
         while (sth.moveToNext())
         {
@@ -56,9 +56,11 @@ public class MarksActivity extends Activity implements IEventHadler
             mark.id_subject = sth.getInt(1);
             mark.title = sth.getString(2);
             mark.points = sth.getInt(3);
+            sum += mark.points;
             adapter.marks.add(mark);
         }
-
+        TextView tv = (TextView)findViewById(R.id.marksSum);
+        tv.setText(sum+" points");
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
