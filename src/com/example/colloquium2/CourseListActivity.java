@@ -40,7 +40,7 @@ public class CourseListActivity extends Activity {
 
     private void update() {
         Cursor courseList = source.getAllCourses();
-        Log.d("COL2-C", Integer.toString(courseList.getCount()));
+
         adapter.swapCursor(courseList);
         adapter.notifyDataSetChanged();
     }
@@ -52,5 +52,6 @@ public class CourseListActivity extends Activity {
         source.createCourse(addText.getText().toString());
 
         update();
+        addText.getText().clear();
     }
 }

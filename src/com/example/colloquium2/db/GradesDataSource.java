@@ -15,9 +15,6 @@ public class GradesDataSource {
     // Database fields
     private SQLiteDatabase database;
     private CourseSQLHelper dbHelper;
-    private String[] allColumns = { CourseSQLHelper.COLUMN_ID, CourseSQLHelper.COLUMN_NAME };
-
-    private final String COURSE_ALL_QUERY = "select courses._id as _id, courses.name as name, sum(grades.grade) as grade from courses left outer join grades on grades.course_id = courses._id group by courses._id;";
 
     public GradesDataSource(Context context) {
         dbHelper = new CourseSQLHelper(context);
@@ -31,13 +28,14 @@ public class GradesDataSource {
         dbHelper.close();
     }
 
-    public Course addGrade(String name, int grade) {
+    public Course addGrade(String name, int course_id, int grade) {
         ContentValues values = new ContentValues();
         values.put(CourseSQLHelper.COLUMN_NAME, name);
-        long insertId = database.insert(CourseSQLHelper.TABLE_COURSES, null, values);
-        Log.d("COL2-Q", Long.toString(insertId));
+        values.put(CourseSQLHelper.COLUMN_COURSE_ID, course_id);
+        values.put(CourseSQLHelper.COLUMN_GRADE, grade);
+        long insertId = database.insert(CourseSQLHelper.TABLE_GRADES, null, values);
 
-        Cursor cursor = database.rawQuery(COURSE_QUERY_BY_ID, new String[]{Long.toString(insertId)});
+        Cursor cursor = database.rawQuery("select * from grades where _id = ?", new String[]{Long.toString(insertId)});
         cursor.moveToFirst();
         Course newCourse = cursorToCourse(cursor);
         cursor.close();
@@ -45,11 +43,11 @@ public class GradesDataSource {
     }
 
     public void deleteCourse(long id) {
-        database.delete(CourseSQLHelper.TABLE_COURSES, "_id = ?", new String[]{Long.toString(id)});
+        database.delete(CourseSQLHelper.TABLE_GRADES, "_id = ?", new String[]{Long.toString(id)});
     }
 
-    public Cursor getAllCourses() {
-        Cursor cursor = database.rawQuery(COURSE_ALL_QUERY, null);
+    public Cursor getGrades(long course_id) {
+        Cursor cursor = database.rawQuery("select * from grades where course_id = ?", new String[]{Long.toString(course_id)});
         return cursor;
     }
 
