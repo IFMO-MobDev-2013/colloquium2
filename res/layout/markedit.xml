@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp">
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Редактирование оценки"
+                android:id="@+id/textView" android:gravity="center" android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp">
+        <TextView
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:text="Название"
+                android:id="@+id/textView" android:gravity="center_vertical|left" android:layout_marginLeft="5dp"/>
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Новая оценка"
+                android:id="@+id/editMarkTitle" android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp">
+        <TextView
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:text="Оценка"
+                android:id="@+id/textView" android:gravity="center_vertical|left" android:layout_marginLeft="5dp"/>
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/editMarkPoints" android:layout_gravity="center" android:text="0"
+                android:inputType="number"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="Сохранить"
+                android:id="@+id/saveButton" android:layout_weight="1" android:enabled="true"
+                android:onClick="onSaveMark"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Удалить"
+                android:id="@+id/deleteButton" android:layout_weight="1" android:enabled="true"
+                android:onClick="onDeleteMark"/>
+    </LinearLayout>
+</LinearLayout>
