@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">colloq2</string>
+    <string name="add_button">Добавить</string>
+    <string name="add_subject_hint">Введите имя</string>
+    <string name="success_add_button">OK</string>
+    <string name="add_mark_button">Добавить оценку</string>
+    <string name="add_mark_hint">Введите оценку</string>
+    <string name="success_add_mark_button">Добавить</string>
+    <string name="empty_name">Введите название предмета</string>
+    <string name="hint">Введите название работы</string>
+    <string name="empty_job">Введите имя работы</string>
+    <string name="bad_int">Оценка должна быть числом</string>
+</resources>
