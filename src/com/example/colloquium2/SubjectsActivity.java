@@ -88,6 +88,9 @@ public class SubjectsActivity extends Activity
         while (cursor.moveToNext()) {
             total += cursor.getInt(scoreIndex);
         }
+        cursor.close();
+        rdb.close();
+        db.close();
         return total;
     }
 
