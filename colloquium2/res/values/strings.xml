@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EDiary</string>
+    <string name="add_subject">Add subject</string>
+    <string name="add_rating">Add mark</string>
+    <string name="cancel">Cancel</string>
+    <string name="subject_name">Subject name</string>
+    <string name="rating_description">Description</string>
+    <string name="rating_mark">Mark</string>
+    <string name="delete">Delete</string>
+    <string name="edit_rating">Edit rating</string>
+    <string name="edit_subject">Edit subject</string>
+</resources>
