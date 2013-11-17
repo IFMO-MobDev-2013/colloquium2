@@ -11,7 +11,7 @@
         <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="Редактирование оценки"
+                android:text="@string/markseditheaderlabel"
                 android:id="@+id/textView" android:gravity="center" android:layout_marginLeft="5dp"/>
     </LinearLayout>
     <LinearLayout
@@ -21,12 +21,12 @@
         <TextView
                 android:layout_width="70dp"
                 android:layout_height="fill_parent"
-                android:text="Название"
+                android:text="@string/marknamelabel"
                 android:id="@+id/textView" android:gravity="center_vertical|left" android:layout_marginLeft="5dp"/>
         <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="Новая оценка"
+                android:text="@string/defaultmarkname"
                 android:id="@+id/editMarkTitle" android:layout_gravity="center"/>
     </LinearLayout>
     <LinearLayout
@@ -36,7 +36,7 @@
         <TextView
                 android:layout_width="70dp"
                 android:layout_height="fill_parent"
-                android:text="Оценка"
+                android:text="@string/markpointslabel"
                 android:id="@+id/textView" android:gravity="center_vertical|left" android:layout_marginLeft="5dp"/>
         <EditText
                 android:layout_width="fill_parent"
@@ -51,13 +51,13 @@
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-                android:text="Сохранить"
+                android:text="@string/savebutton"
                 android:id="@+id/saveButton" android:layout_weight="1" android:enabled="true"
                 android:onClick="onSaveMark"/>
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Удалить"
+                android:text="@string/deletebutton"
                 android:id="@+id/deleteButton" android:layout_weight="1" android:enabled="true"
                 android:onClick="onDeleteMark"/>
     </LinearLayout>

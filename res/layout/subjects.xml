@@ -11,7 +11,7 @@
         <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="Add new subject"
+                android:text="@string/addsubjectbutton"
                 android:id="@+id/addChannelButton" android:onClick="gotoAddSubject"/>
     </LinearLayout>
     <LinearLayout
@@ -21,7 +21,7 @@
         <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
-                android:text="List of subjects"
+                android:text="@string/subjectsheaderlabel"
                 android:id="@+id/textView" android:textSize="15dp" android:layout_weight="0"
                 android:layout_gravity="center" android:gravity="center"/>
     </LinearLayout>

@@ -12,7 +12,7 @@
         <TextView
                 android:layout_width="50dp"
                 android:layout_height="fill_parent"
-                android:text="NAME"
+                android:text="@string/subjectnamelabel"
                 android:id="@+id/textView" android:gravity="center_vertical|left" android:layout_marginLeft="5dp"/>
         <EditText
                 android:layout_width="fill_parent"

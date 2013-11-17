@@ -5,4 +5,11 @@
     <string name="defaultsubjectname">New subject</string>
     <string name="savebutton">SAVE</string>
     <string name="deletebutton">DELETE</string>
+    <string name="addsubjectbutton">Add new subject</string>
+    <string name="defaultmarkname">New mark</string>
+    <string name="subjectnamelabel">NAME</string>
+    <string name="marknamelabel">Name</string>
+    <string name="markpointslabel">Points</string>
+    <string name="subjectsheaderlabel">List of subjects</string>
+    <string name="markseditheaderlabel">Mark edit</string>
 </resources>
